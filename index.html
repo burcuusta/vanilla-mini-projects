@@ -18,7 +18,7 @@
       <a class="nav__link" href="#hero">Hero</a>
       <a class="nav__link" href="#projects">Projeler</a>
       <a class="nav__link" href="#about">Hakkında</a>
-      <a class="nav__link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="nav__link" href="https://github.com/burcuusta" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
 </header>
@@ -35,21 +35,94 @@
     </section>
 
      <section id="projects" class="section">
-      <div class="container">
-        <h2>Projeler</h2>
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">Projeler</h2>
+      <p class="section__subtitle">Her proje bağımsız bir sayfada çalışır.</p>
+    </header>
 
-        <div class="projects">
-          <ul>
-            <li><a href="./projects/weather/index.html">Weather App</a></li>
-            <li><a href="./projects/todo/index.html">To Do List</a></li>
-            <li><a href="./projects/quiz/index.html">Quiz App</a></li>
-            <li><a href="./projects/calculator/index.html">Calculator</a></li>
-            <li><a href="./projects/qr-generator/index.html">QR Code Generator</a></li>
-            <li><a href="./projects/music-player/index.html">Music Player</a></li>
-          </ul>
+    <div class="projects">
+      <a class="card" href="./projects/weather/index.html">
+        <div class="card__top">
+          <h3 class="card__title">Weather App</h3>
+          <span class="badge badge--intermediate">Intermediate</span>
         </div>
-      </div>
-    </section>
+        <p class="card__desc">Şehir arama, hava durumu bilgisi ve temiz UI.</p>
+        <ul class="card__meta" aria-label="Etiketler">
+          <li class="tag">Fetch</li>
+          <li class="tag">States</li>
+          <li class="tag">UX</li>
+        </ul>
+      </a>
+
+      <a class="card" href="./projects/todo/index.html">
+        <div class="card__top">
+          <h3 class="card__title">To Do List</h3>
+          <span class="badge badge--basic">Basic</span>
+        </div>
+        <p class="card__desc">Görev ekle/sil/tamamla. Sağlam temel.</p>
+        <ul class="card__meta" aria-label="Etiketler">
+          <li class="tag">DOM</li>
+          <li class="tag">Storage</li>
+          <li class="tag">Events</li>
+        </ul>
+      </a>
+
+      <a class="card" href="./projects/quiz/index.html">
+        <div class="card__top">
+          <h3 class="card__title">Quiz App</h3>
+          <span class="badge badge--intermediate">Intermediate</span>
+        </div>
+        <p class="card__desc">Soru akışı, skor ve sonuç ekranı.</p>
+        <ul class="card__meta" aria-label="Etiketler">
+          <li class="tag">Flow</li>
+          <li class="tag">State</li>
+          <li class="tag">UI</li>
+        </ul>
+      </a>
+
+      <a class="card" href="./projects/calculator/index.html">
+        <div class="card__top">
+          <h3 class="card__title">Calculator</h3>
+          <span class="badge badge--basic">Basic</span>
+        </div>
+        <p class="card__desc">Temel işlemler, klavye desteği, hatasız input.</p>
+        <ul class="card__meta" aria-label="Etiketler">
+          <li class="tag">Logic</li>
+          <li class="tag">Keyboard</li>
+          <li class="tag">Math</li>
+        </ul>
+      </a>
+
+      <a class="card" href="./projects/qr-generator/index.html">
+        <div class="card__top">
+          <h3 class="card__title">QR Code Generator</h3>
+          <span class="badge badge--intermediate">Intermediate</span>
+        </div>
+        <p class="card__desc">Metinden QR üretimi, indirme, doğrulama.</p>
+        <ul class="card__meta" aria-label="Etiketler">
+          <li class="tag">Canvas</li>
+          <li class="tag">Tools</li>
+          <li class="tag">UX</li>
+        </ul>
+      </a>
+
+      <a class="card" href="./projects/music-player/index.html">
+        <div class="card__top">
+          <h3 class="card__title">Music Player</h3>
+          <span class="badge badge--advanced">Advanced</span>
+        </div>
+        <p class="card__desc">Playlist, progress bar, volume, shortcuts.</p>
+        <ul class="card__meta" aria-label="Etiketler">
+          <li class="tag">Audio</li>
+          <li class="tag">State</li>
+          <li class="tag">UI</li>
+        </ul>
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <section id="about" class="section">
       <div class="container">
