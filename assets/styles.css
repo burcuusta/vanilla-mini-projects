@@ -105,3 +105,201 @@ display: flex;
 @media (max-width: 560px){
   .projects{ grid-template-columns: 1fr; }
 }
+
+/*hero section*/
+/* HERO - layout (minimal) */
+.hero__inner{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.hero__title{ margin: 0 0 10px; }
+.hero__lead{ margin: 0 0 12px; }
+
+.hero__actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero__stats{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.stat{
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.stat__label{ display:block; }
+
+/* responsive hero */
+@media (max-width: 900px){
+  .hero__inner{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Global UI primitives ===== */
+
+:root{
+  --max: 1100px;
+  --border: #ddd;
+  --text: #111;
+  --muted: #555;
+  --bg: #fff;
+}
+
+body{
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,h2,h3{ line-height: 1.15; }
+h1,h2,h3,p{ margin: 0; }
+
+.section p{ margin-top: 8px; }
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+/* container zaten var, burada sadece sağlamlaştırıyoruz */
+.container{
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* buttons */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+.btn:hover{
+  text-decoration: none;
+}
+
+/* ghost button */
+.btn--ghost{
+  background: transparent;
+}
+/* ===== Card interaction states ===== */
+
+/* kart temel geçişleri */
+.card{
+  transition:
+    transform .12s ease,
+    box-shadow .12s ease,
+    border-color .12s ease;
+}
+
+/* hover: mouse ile üstüne gelince */
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border-color: #ccc;
+}
+
+/* focus: klavye ile tab ile gelince */
+.card:focus-visible{
+  outline: 3px solid #4c6ef5;
+  outline-offset: 3px;
+}
+
+/* active: tıklama anı */
+.card:active{
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+/* ===== Minimal design tokens ===== */
+:root{
+  --bg: #0b1020;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.65);
+  --panel: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.12);
+  --shadow: 0 12px 40px rgba(0,0,0,.35);
+  --radius: 18px;
+  --radius2: 22px;
+}
+
+/* sayfa yüzeyi */
+body{
+  background:
+    radial-gradient(1000px 600px at 15% 10%, rgba(76,110,245,.22), transparent 60%),
+    radial-gradient(900px 500px at 85% 20%, rgba(34,197,94,.14), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* muted metin */
+.section__subtitle,
+.hero__lead,
+.card__desc{
+  color: var(--muted);
+}
+
+/* header / footer çizgileri */
+.header{ border-bottom: 1px solid var(--border); }
+.footer{ border-top: 1px solid var(--border); }
+
+.card{
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), var(--panel));
+  border-radius: var(--radius2);
+  box-shadow: var(--shadow);
+}
+.tag, .badge{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
+}
+.hero__badge{
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
+  margin-bottom: 10px;
+  width: fit-content;
+}
+.stat{
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  border-radius: var(--radius);
+}
+.btn{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+}
+.btn:hover{
+  background: rgba(255,255,255,.08);
+}
+.btn--ghost{
+  background: transparent;
+}
+
+
+
+
+
